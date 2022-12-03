@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- <bean id="c" class="com.masai.Car"/>
+    <bean id="b" class="com.masai.Bike"/>
+
+    <bean id="tr" class="com.masai.Travel">
+    <property name="noOfPerson" value="2"/>
+    <property name="v" ref="c"/>
+    </bean>
+    
+    <bean id="tr2" class="com.masai.Travel">
+    <constructor-arg name="noOfPerson" value="5"/>
+    <constructor-arg name="v" ref="c"/>
+    
+    </bean>
+    <bean id="aobj" class="com.masai.circularDependency.A">
+    <property name="b1" ref="bobj"/>
+    </bean>
+    
+    
+    <bean id="bobj" class="com.masai.circularDependency.B">
+    <constructor-arg name="a1" ref="aobj"/>
+    </bean>
+    
+    <bean id="db" class="com.masai.dao.DAOBean"/>
+    
+    <bean id="sb" class="com.masai.dao.ServiceBean" autowire="constructor" />
+    
+    
+    <bean id="pb" class="com.masai.dao.PresentationBean" autowire="constructor" />
+    
+   
+     -->
+     
+      <bean id="aid2" name="com.masai.initmethod" init-method="mySetup" >
+    <property name="age" value="24"/>
+    <property name="name" value="Sudhanshu"/>
+    
+    </bean>
+    
+
+</beans>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="e1" class="com.masai.model.Employee">
+        <constructor-arg name="empId" value="01" />
+        <constructor-arg name="empName" value="Sudhanshu" />
+        <constructor-arg name="address" value="Gurgon" />
+        <constructor-arg name="salary" value="250000" />
+        </bean>
+        <bean id="e2" class="com.masai.model.Employee">
+        <constructor-arg name="empId" value="02" />
+        <constructor-arg name="empName" value="Ram" />
+        <constructor-arg name="address" value="Ayodhya" />
+        <constructor-arg name="salary" value="550000" />
+        </bean>
+        
+        <bean id="d1" class="com.masai.model.Department">
+        <constructor-arg name="deptId" value="4" />
+        <constructor-arg name="deptName" value="Mechanical" />
+        <constructor-arg name="location" value="Durgapur" />
+        </bean>
+        
+        <bean id="d2" class="com.masai.model.Department">
+        <constructor-arg name="deptId" value="8" />
+        <constructor-arg name="deptName" value="ComputerScience" />
+        <constructor-arg name="location" value="Delhi" />
+        </bean>
+        
+        <bean id="do" class="com.masai.model.Demo" init-method="myInit" destroy-method="cleanUp">
+        
+        <property name="theMap">
+        <map>
+        <entry key-ref="d1" value-ref="e1"/>
+        <entry key-ref="d2" value-ref="e2"/>  
+        </map>
+        </property>
+ 
+        </bean>
+        
+        
+ </beans>

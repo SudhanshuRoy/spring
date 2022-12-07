@@ -1,0 +1,8 @@
+Q3/- What is the difference between setter injection and constructor injection?
+Ans:
+constructor                                                            setter
+1.It may cause circular dependency         It resolve the circular dependency
+2.If the dependency is mandatory             If the dependency is optional
+3.If the dependency is "final" variable     We can not inject the final variable through the setter
+ then it must be injected through the
+constructor injection only.

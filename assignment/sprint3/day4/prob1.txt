@@ -1,0 +1,11 @@
+Q1/- Explain about the life-cycle of a Spring Bean.
+
+Spring container will control the life-cycle of a spring bean, i.e. from instantiation to destruction.
+
+Life-cycle of a spring bean has 5 stages:
+1. Does not exist
+2. Instantiated
+3. Initialized
+4. Service
+5. Destroy
+

@@ -1,0 +1,14 @@
+Explain the life cycle of the Spring Bean ?
+
+Ans: Spring container is controlling life cycle of Spring bean.
+there are five stages in life-cycle of spring bean-
+1.Does not exist;
+2.Instantiated
+3.Initilized
+4.service
+5.Destroy
+1.Initially spring bean object doesn't exist.
+2.Spring container loads the spring bean class into the memory and create the bean obj.
+3.If inside the spring bean class any user defined init methd is configured, spring container will call that method.
+4.Here spring container provides the bean object ref to the caller, then caller can call its business method on the bean object.
+5.On the container shutdown spring container will call user -defined destroy() method if it is configured , just before bean instanciate the garbage collectionn.

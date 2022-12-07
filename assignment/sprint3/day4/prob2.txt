@@ -1,0 +1,28 @@
+Q2/- How many scopes are there for a Spring Bean, which is the default scope for a Spring
+Bean? Explain with an example.
+
+Ans: 
+A scope indicates the life span of an object of Spring bean.
+Spring f/w defines 4 scopes for a bean:
+1. singleton scope (it is a default scope of spring bean)
+2. prototype scope
+3. request scope
+4. session scope
+
+Example singleton scope:
+A obj1 = ctx.getBean("a1",A.class);
+A obj2 = ctx.getBean("a1",A.class);
+System.out.println(obj1 == obj2); //true
+
+Example prototype scope:
+
+<bean id="a1" class="com.masai.A" scope="prototype">
+<property name="message" value="Welcome to Spring.."/>
+</bean>
+
+ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml");
+A obj1 = ctx.getBean("a1",A.class);
+A obj2 = ctx.getBean("a1",A.class);
+System.out.println(obj1 == obj2); //false
+
+

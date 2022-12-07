@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+       <!--  <bean id="aid" class="com.masai.model.A">
+        <property name="names">
+        <list>
+        <value>delhi</value>
+        <value>chennai</value>
+        <value>mumbai</value>
+        <value>kolkatta</value>
+        </list>
+        </property>
+        </bean> -->
+        
+        
+        <bean id="s1" class="com.masai.model.Student">
+         <constructor-arg name="roll" value="100" />
+         <constructor-arg name="name" value="Ram" />
+         <constructor-arg name="marks" value="780" />
+        </bean>
+        
+        <bean id="s2" class="com.masai.model.Student">
+         <constructor-arg name="roll" value="101" />
+         <constructor-arg name="name" value="Ramesh" />
+         <constructor-arg name="marks" value="680" />
+        </bean>
+        
+        <bean id="s3" class="com.masai.model.Student">
+        <constructor-arg name="roll" value="102" />
+        <constructor-arg name="name" value="Sunil" />
+        <constructor-arg name="marks" value="880" />
+        </bean>
+        
+        <bean id="cl1" class="com.masai.model.College">
+        
+        <constructor-arg name="collegeName" value="NIT"/>
+        
+        <property name="students">
+        <list>
+        <ref bean="s1" />
+        <ref bean="s2" />
+        <ref bean="s3" />
+        </list>
+        </property>
+        
+        </bean>
+       
+</beans>

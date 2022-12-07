@@ -1,0 +1,3 @@
+What is Dependency Injection ? 
+Ans: Here the external entity will push dependency object inside the dependent class. In spring frame work spring containal is external entity.Dependent class configure the object inside the container and container will 
+push dependency object inside the depedent class.

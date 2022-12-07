@@ -1,0 +1,5 @@
+What do you mean by the IOC ? : 
+
+Ans; Generally dependent class create object of dependent class then, it called object creaed in main controll.
+But when some extenal entity taking care of creation of dependency object then we say controll is inverted.
+this is called IOC.
